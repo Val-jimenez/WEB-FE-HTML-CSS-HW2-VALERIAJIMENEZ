@@ -1,49 +1,81 @@
-*{
-    padding: 0;
-    margin: 0;
-}
-header{
-    background-image: url(../img/fondo_header.jpeg);
-}
-.header_logo{
-    margin-left:50px;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.header_logo img {
-    max-width: 180px;
-    filter: invert(100%);
-}
-.header_container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;    
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header header header"
+    "aside section1 section1 section1"
+    "aside section2 section3 section3"
+    "aside section2 section4 section5"
+    "footer footer footer footer";
+    grid-template-columns: 1fr 2fr 2.5fr 2.5fr;
+    grid-template-rows: 1fr 0.5fr 2fr 1.5fr 0.60fr;
+    gap: 5px;
 }
 
-.header_right{
-    display: flex;
-    justify-content: flex-end;
+.header {
+  grid-area: header;
+  background-color: green;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.header img {
+  width: 70px;
+  height: 70px;
+  filter: invert(100%);
+}
+
+.aside {
+  grid-area: aside;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.section1 {
+  grid-area: section1;
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding-right: 60px;
-    gap:30px;
+    height: 100%;
+    background-color: #e2e2e2;
+    text-align: center;
 }
 
-.header_right img{
-    max-width: 40px;
-    filter: invert(100%);
-    width: 50%;
-    height:50%;
+.section2 {
+  grid-area: section2;
+  background-color: #c2c2c2;
+  padding: 20px;
 }
-.header_right img:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+
+.section3 {
+  grid-area: section3;
+  background-color: #a2a2a2;
+  padding: 20px;
 }
-.header_middle{
-    display: flex;
-    align-items: center;
+
+.section4 {
+  grid-area: section4;
+  background-color: #828282;
+  padding: 20px;
 }
-#search-bar {
-    width: 500px; /* Ancho de la barra de búsqueda */
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 10px 10px 10px 10px;
-    outline: none;
+
+.section5 {
+  grid-area: section5;
+  background-color: #626262;
+  padding: 20px;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
