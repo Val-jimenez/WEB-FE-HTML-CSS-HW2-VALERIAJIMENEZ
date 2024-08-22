@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bodycontact">
+    <section class="form-container">
+        <!-- LEFT SIDE: CONTROLLERS AND DESCRIPTION -->
+        <section class="photocontrollers">
+            <div>
+                <img src="img/controllerseroe2jpg.png" alt="XBOX ELITE CONTROLLER SERIES 2">
+            </div>
+            <section class="description">
+                <h1>Xbox Elite Wireless Controller Series 2</h1>
+                <p>Designed to meet the needs of today’s competitive gamers, the Xbox Elite Wireless Controller Series 2 
+                    features over 30 new ways to play like a pro. 
+                    Enhance your aiming with new adjustable-tension thumbsticks, 
+                    fire even faster with shorter hair trigger locks, and stay on target with a wrap-around rubberized grip.</p>
+            </section>
+        </section>
+
+        <!-- RIGHT SIDE: CONTACT FORM -->
+        <section class="contact-form">
+            <h2>Registration</h2>
+            <form action="#" method="POST">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="message">Describe the perfect controller for you:</label>
+                <textarea id="message" name="message" rows="4"  min="1" max="255" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </section>
+</body>
+
+</html>
+
